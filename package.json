@@ -7,12 +7,9 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "serve": "yarn run build:watch && firebase serve --only functions",
-    "dev": "ENV=dev concurrently \"yarn run build:watch\" \"sleep 2 && firebase serve --only functions\"",
+    "serve": "firebase serve --only functions",
     "predeploy": "yarn run build",
-    "deploy": "firebase deploy --only functions",
-    "deploy:dev": "firebase use development && yarn run deploy",
-    "deploy:prod": "firebase use default && yarn run deploy"
+    "deploy": "firebase deploy --only functions"
   },
   "main": "lib/index.js",
   "dependencies": {
