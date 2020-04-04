@@ -13,7 +13,7 @@ const notifyConfirmedCaseCreated = functions.firestore
 
     const notification = {
       title: "Latest confirmed cases of COVID-19",
-      body: `South Africa has just confirmed ${confirmedCase.confirmedCases} COVID-19 cases.`
+      body: `South Africa has just confirmed ${confirmedCase.confirmedCases} COVID-19 cases. Open the app for more info.`,
     };
     console.log(
       `Created notification with title: ${notification.title}, body: ${notification.body} `
