@@ -2,7 +2,7 @@
 
 ## Description
 
-Firebase Cloud Functions for the CVD19ZA mobile app.
+Firebase Cloud Functions for the [CVD19ZA mobile app](https://github.com/shaunsaker/covid-19-south-africa-app).
 
 ## Development
 
