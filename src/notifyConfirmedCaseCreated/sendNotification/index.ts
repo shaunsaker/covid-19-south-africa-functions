@@ -1,5 +1,5 @@
 import { NotificationMessage, Topics } from "../../types";
-import { admin } from "../../admin";
+import { firebase } from "../../firebase";
 
 const sendNotification = async (
   notification: NotificationMessage,
@@ -11,12 +11,12 @@ const sendNotification = async (
   if (topic) {
     payload = {
       notification,
-      topic
+      topic,
     };
   } else if (token) {
     payload = {
       notification,
-      token
+      token,
     };
   }
 
@@ -24,7 +24,7 @@ const sendNotification = async (
     console.log("Sending notification...");
 
     try {
-      const response = await admin.messaging().send(payload);
+      const response = await firebase.messaging().send(payload);
 
       console.log(`Successfully sent notification: ${response}`);
     } catch (error) {
